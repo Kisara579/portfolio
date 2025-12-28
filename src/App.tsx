@@ -1,8 +1,15 @@
+import Hero from "./components/Hero/Hero.tsx";
+
 function App() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-blue-500 text-white text-3xl">
-      Tailwind is working 🚀
-    </div>
+    <>
+      <div className="min-h-screen bg-black">
+        <div className="flex sm:flex-row flex-col justify-center  items-center min-h-screen  ">
+          <div className="w-full   sm:w-6/12   "></div>
+          <div className="w-full  sm:w-6/12  "></div>
+        </div>
+      </div>
+    </>
   );
 }
 
