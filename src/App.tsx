@@ -5,7 +5,7 @@ function App() {
     <>
       <div className="min-h-screen bg-black">
         <div className="flex sm:flex-row flex-col justify-center  items-center min-h-screen  ">
-          <div className="w-full   sm:w-6/12   "></div>
+          <div className="w-full  sm:w-6/12 text-white text-lg   ">Hi, I’m Kisara Beddawala</div>
           <div className="w-full  sm:w-6/12  "></div>
         </div>
       </div>
