@@ -24,12 +24,12 @@ const Hero = () => {
             </a>
           </div>
         </div>
-        <div className="w-full  sm:w-6/12 p-10 sm:p-5 m-10 border-2 border-cyan-400 rounded-lg">
-          <div className="flex items-center justify-center min-h-[300px] text-white">
+        <div className="w-full sm:w-6/12 p-5 m-10 border-2 border-cyan-400 rounded-lg">
+          <div className="w-full h-[420px] sm:h-[480px] flex items-center justify-center">
             <img
               src={UserImage}
-              alt=" grid"
-              className="w-full h-auto object-contain rounded-lg"
+              alt="User illustration"
+              className="w-full h-full object-cover rounded-lg"
             />
           </div>
         </div>
