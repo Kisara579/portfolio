@@ -3,7 +3,7 @@ import UserImage from "../../assets/user.jpg";
 const Hero = () => {
   return (
     <>
-      <div className="flex sm:flex-row flex-col justify-center  items-center min-h-screen  ">
+      <div className="flex sm:flex-row flex-col justify-center  items-center min-h-screen  bg-black  ">
         <div className="w-full  sm:w-6/12 text-white   p-10  text-center sm:text-left sm:p-5 ">
           <div className="text-3xl sm:text-4xl font-mono font-bold">
             <span className="text-xl ">Hi, I’m</span>
