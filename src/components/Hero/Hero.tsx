@@ -1,25 +1,38 @@
+import UserImage from "../../assets/user.jpg";
+
 const Hero = () => {
   return (
     <>
-      <div className="flex sm:flex-row flex-col justify-center  items-center min-h-screen  ">
+      <div className="flex sm:flex-row flex-col justify-center  items-center min-h-screen  bg-black  ">
         <div className="w-full  sm:w-6/12 text-white   p-10  text-center sm:text-left sm:p-5 ">
-          <div className="text-2xl">
-            <span className="text-lg">Hi, I’m</span> Kisara Beddawala
+          <div className="text-3xl sm:text-4xl font-mono font-bold">
+            <span className="text-xl ">Hi, I’m</span>
+            <span className="text-cyan-400"> Kisara Beddawala</span>
           </div>
-          <div className="text-lg">A computer science undergraduate</div>
-          <div className="text-md">
+          <div className="text-md sm:text-lg mt-3 font-semibold">
+            A computer science undergraduate
+          </div>
+          <div className="text-sm sm:text-md mt-2">
             Passionate about cybersecurity, ethical hacking.
           </div>
           <div className="mt-5 flex justify-center sm:justify-start">
-            <button className="text-lg">Explore My Work</button>
+            <button className="text-md sm:text-lg">Explore My Work</button>
           </div>
           <div className="mt-3 flex justify-center sm:justify-start">
-            <a href="#View-Resume" className="text-md">
+            <a href="#View-Resume" className="text-md sm:text-lg">
               View Resume
             </a>
           </div>
         </div>
-        <div className="w-full  sm:w-6/12  "></div>
+        <div className="w-full sm:w-6/12 p-5 m-10 border-2 border-cyan-400 rounded-lg">
+          <div className="w-full h-[420px] sm:h-[480px] flex items-center justify-center">
+            <img
+              src={UserImage}
+              alt="User illustration"
+              className="w-full h-full object-cover rounded-lg"
+            />
+          </div>
+        </div>
       </div>
     </>
   );
