@@ -13,7 +13,6 @@ function Skills() {
 
       {/* Skills Grid */}
       <div className="max-w-5xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 gap-8">
-        {/* Cybersecurity */}
         <div className="bg-slate-800/50 border border-slate-700/50 rounded-lg p-6 text-left">
           <h3 className="text-xl font-semibold text-white mb-3">
             Cybersecurity (Learning Focus)
@@ -25,8 +24,6 @@ function Skills() {
             <li>Password & authentication basics</li>
           </ul>
         </div>
-
-        {/* Computer Science Foundations */}
         <div className="bg-slate-800/50 border border-slate-700/50 rounded-lg p-6 text-left">
           <h3 className="text-xl font-semibold text-white mb-3">
             Computer Science Foundations
@@ -38,8 +35,6 @@ function Skills() {
             <li>Operating system basics</li>
           </ul>
         </div>
-
-        {/* Programming & Web Development */}
         <div className="bg-slate-800/50 border border-slate-700/50 rounded-lg p-6 text-left">
           <h3 className="text-xl font-semibold text-white mb-3">
             Programming & Web Development
@@ -51,8 +46,6 @@ function Skills() {
             <li>HTML, CSS, Tailwind</li>
           </ul>
         </div>
-
-        {/* Tools & Development Environment */}
         <div className="bg-slate-800/50 border border-slate-700/50 rounded-lg p-6 text-left">
           <h3 className="text-xl font-semibold text-white mb-3">
             Tools & Development Environment
