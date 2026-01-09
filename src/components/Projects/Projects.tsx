@@ -1,3 +1,5 @@
+import ProjectCard from "./ProjectCard";
+
 function Projects() {
   return (
     <section className="w-full">
@@ -10,24 +12,30 @@ function Projects() {
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6  ">
-          <div className="bg-slate-800/50 border border-slate-700/50 rounded-lg p-6 hover:-translate-y-0.5  transition-all duration-500">
-            <h3 className="text-xl font-semibold text-white mb-3">Project 1</h3>
-          </div>
-          <div className="bg-slate-800/50 border border-slate-700/50 rounded-lg p-6 hover:-translate-y-0.5  transition-all duration-500">
-            <h3 className="text-xl font-semibold text-white mb-3">Project 2</h3>
-          </div>
-          <div className="bg-slate-800/50 border border-slate-700/50 rounded-lg p-6 hover:-translate-y-0.5  transition-all duration-500">
-            <h3 className="text-xl font-semibold text-white mb-3">Project 3</h3>
-          </div>
-          <div className="bg-slate-800/50 border border-slate-700/50 rounded-lg p-6 hover:-translate-y-0.5  transition-all duration-500">
-            <h3 className="text-xl font-semibold text-white mb-3">Project 4</h3>
-          </div>
-          <div className="bg-slate-800/50 border border-slate-700/50 rounded-lg p-6 hover:-translate-y-0.5  transition-all duration-500">
-            <h3 className="text-xl font-semibold text-white mb-3">Project 5</h3>
-          </div>
-          <div className="bg-slate-800/50 border border-slate-700/50 rounded-lg p-6 hover:-translate-y-0.5  transition-all duration-500">
-            <h3 className="text-xl font-semibold text-white mb-3">Project 6</h3>
-          </div>
+          <ProjectCard
+            title="Project 1"
+            description="Description of Project 1"
+          ></ProjectCard>
+          <ProjectCard
+            title="Project 2"
+            description="Description of Project 2"
+          ></ProjectCard>
+          <ProjectCard
+            title="Project 3"
+            description="Description of Project 3"
+          ></ProjectCard>
+          <ProjectCard
+            title="Project 4"
+            description="Description of Project 4"
+          ></ProjectCard>
+          <ProjectCard
+            title="Project 5"
+            description="Description of Project 5"
+          ></ProjectCard>
+          <ProjectCard
+            title="Project 6"
+            description="Description of Project 6"
+          ></ProjectCard>
         </div>
       </div>
     </section>
