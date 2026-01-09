@@ -7,35 +7,25 @@ function Projects() {
         <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-cyan-400">
           Projects
         </h2>
-        <p className="text-gray-400  ">
+
+        <p className="text-gray-400">
           Some of the projects I've worked on to build my skills and experience.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6  ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           <ProjectCard
-            title="Project 1"
-            description="Description of Project 1"
-          ></ProjectCard>
+            title="Smart Password Analyzer"
+            description="Analyzes password strength and highlights security risks."
+            techStack={["React", "TypeScript", "Tailwind", "Cybersecurity"]}
+            githubUrl="https://github.com/kisara579/smart-password-risk-analyzer"
+          />
+
           <ProjectCard
-            title="Project 2"
-            description="Description of Project 2"
-          ></ProjectCard>
-          <ProjectCard
-            title="Project 3"
-            description="Description of Project 3"
-          ></ProjectCard>
-          <ProjectCard
-            title="Project 4"
-            description="Description of Project 4"
-          ></ProjectCard>
-          <ProjectCard
-            title="Project 5"
-            description="Description of Project 5"
-          ></ProjectCard>
-          <ProjectCard
-            title="Project 6"
-            description="Description of Project 6"
-          ></ProjectCard>
+            title="Portfolio Website"
+            description="Personal developer portfolio with modern UI."
+            techStack={["React", "Tailwind", "Vite"]}
+            githubUrl="https://github.com/kisara579/portfolio"
+          />
         </div>
       </div>
     </section>
