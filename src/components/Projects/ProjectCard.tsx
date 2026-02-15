@@ -7,6 +7,8 @@ type ProjectCardProps = {
   githubUrl: string;
 };
 
+export type { ProjectCardProps };
+
 function ProjectCard({
   title,
   description,

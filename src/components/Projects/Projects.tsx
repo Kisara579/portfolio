@@ -1,6 +1,20 @@
-import ProjectCard from "./ProjectCard";
+import ProjectCard , {type ProjectCardProps} from "./ProjectCard";
 
 function Projects() {
+  const projects: ProjectCardProps[] = [
+    {
+      title: "Smart Password Analyzer",
+      description: "Analyzes password strength and highlights security risks.",
+      techStack: ["React", "TypeScript", "Tailwind", "Cybersecurity"],
+      githubUrl: "https://github.com/kisara579/smart-password-risk-analyzer",
+    },
+    {
+      title: "Portfolio Website",
+      description: "Personal developer portfolio with modern UI.",
+      techStack: ["React", "Tailwind", "Vite"],
+      githubUrl: "https://github.com/kisara579/portfolio",
+    },
+  ];
   return (
     <section className="w-full">
       <div className="max-w-5xl mx-auto px-6 text-center space-y-6">
@@ -13,19 +27,9 @@ function Projects() {
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <ProjectCard
-            title="Smart Password Analyzer"
-            description="Analyzes password strength and highlights security risks."
-            techStack={["React", "TypeScript", "Tailwind", "Cybersecurity"]}
-            githubUrl="https://github.com/kisara579/smart-password-risk-analyzer"
-          />
-
-          <ProjectCard
-            title="Portfolio Website"
-            description="Personal developer portfolio with modern UI."
-            techStack={["React", "Tailwind", "Vite"]}
-            githubUrl="https://github.com/kisara579/portfolio"
-          />
+          {projects.map((project) => (
+            <ProjectCard key={project.title} {...project} />
+          ))}
         </div>
       </div>
     </section>

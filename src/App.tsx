@@ -2,6 +2,7 @@ import Hero from "./components/Hero/Hero.tsx";
 import About from "./components/About/About.tsx";
 import Skills from "./components/Skills/Skills.tsx";
 import Projects from "./components/Projects/Projects.tsx";
+import Contact from "./components/Contact/Contact.tsx";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <About />
         <Skills />
         <Projects />
+        <Contact/>
       </div>
     </>
   );
