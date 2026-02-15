@@ -1,6 +1,6 @@
 function Skills() {
   return (
-    <section className="w-full py-32 bg-slate-950">
+    <section id="skills" className="w-full py-32 bg-slate-950">
       {/* Section Heading */}
       <div className="max-w-5xl mx-auto px-6 text-center mb-12">
         <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-cyan-500">

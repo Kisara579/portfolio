@@ -5,3 +5,20 @@
 html{
     scroll-behavior: smooth;
 }
+
+body{
+  overflow-x: hidden;
+}
+
+.text-glow {
+  text-shadow: 0 0 12px rgba(34, 211, 238, 0.35);
+}
+
+.neon-ring {
+  box-shadow: 0 0 0 2px rgba(37, 226, 255, 0.566), 0 0 35px rgba(34, 211, 238, 0.25);
+}
+
+.neon-btn {
+  box-shadow: 0 0 12px rgba(34, 211, 238, 0.25),
+              0 0 20px rgba(168, 85, 247, 0.15);
+}

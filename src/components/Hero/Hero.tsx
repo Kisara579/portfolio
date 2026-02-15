@@ -3,11 +3,23 @@ import UserImage from "../../assets/user.jpg";
 const Hero = () => {
   return (
     <>
-      <div className="flex sm:flex-row flex-col justify-center  items-center min-h-screen  bg-black  ">
-        <div className="w-full  sm:w-6/12 text-white   p-10  text-center sm:text-left sm:p-5 ">
-          <div className="text-3xl sm:text-4xl font-mono font-bold">
-            <span className="text-xl ">Hi, I’m</span>
-            <span className="text-cyan-400"> Kisara Beddawala</span>
+      <div id="home" className="relative flex flex-col justify-center  items-center min-h-screen bg-gradient-to-b from-[#050816] via-black to-[#050816] text-white px-6 pt-24 ">
+        <div className="absolute top-1/4 w-[300px] sm:w-[500px]  h-[300px] sm:h-[500px]  bg-cyan-500/10 rounded-full blur-3xl -z-10"></div>
+        <div className="mb-8">
+          <div className="w-48 h-48 sm:w-56 sm:h-56 rounded-full overflow-hidden neon-ring flex items-center justify-center">
+            <img
+              src={UserImage}
+              alt="User illustration"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+        <div className="w-full  max-w-2xl  text-center ">
+          <div className="text-4xl sm:text-5xl font-mono font-bold tracking-tight">
+            <div className="text-lg sm:text-md text-slate-300 mb-2">
+              Hi, I’m
+            </div>
+            <span className="text-cyan-400 text-glow"> Kisara Beddawala</span>
           </div>
           <div className="text-md sm:text-lg mt-3 font-semibold">
             A computer science undergraduate
@@ -15,22 +27,16 @@ const Hero = () => {
           <div className="text-sm sm:text-md mt-2">
             Passionate about cybersecurity, ethical hacking.
           </div>
-          <div className="mt-5 flex justify-center sm:justify-start">
-            <button className="text-md sm:text-lg">Explore My Work</button>
-          </div>
-          <div className="mt-3 flex justify-center sm:justify-start">
-            <a href="#View-Resume" className="text-md sm:text-lg">
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <button className="px-6 py-3 rounded-full text-white font-semibold bg-gradient-to-r from-cyan-400 to-purple-400 hover:scale-105 transition-transform duration-300 neon-btn">
+              Explore My Work
+            </button>
+            <a
+              href="#View-Resume"
+              className="px-6 py-3 rounded-full border-2 border-cyan-400/60 text-cyan-300 hover:bg-cyan-400 hover:text-black transition-all duration-300"
+            >
               View Resume
             </a>
-          </div>
-        </div>
-        <div className="w-full sm:w-6/12 p-5 m-10 border-2 border-cyan-400 rounded-lg">
-          <div className="w-full h-[420px] sm:h-[480px] flex items-center justify-center">
-            <img
-              src={UserImage}
-              alt="User illustration"
-              className="w-full h-full object-cover rounded-lg"
-            />
           </div>
         </div>
       </div>

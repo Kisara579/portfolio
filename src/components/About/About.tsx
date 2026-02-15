@@ -1,6 +1,6 @@
 function About() {
   return (
-    <section className="w-full py-32 bg-slate-950">
+    <section id="about" className="w-full py-32 bg-slate-950">
       <div className="max-w-5xl mx-auto px-6 text-center space-y-6">
         {/* Section Heading */}
         <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-cyan-400 mb-6">

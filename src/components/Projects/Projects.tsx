@@ -16,7 +16,7 @@ function Projects() {
     },
   ];
   return (
-    <section className="w-full">
+    <section id="projects" className="w-full scroll-mt-28">
       <div className="max-w-5xl mx-auto px-6 text-center space-y-6">
         <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-cyan-400">
           Projects
