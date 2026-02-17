@@ -1,4 +1,4 @@
-import UserImage from "../../assets/dp.jpg";
+import UserImage from "../../assets/profile.jpg";
 
 const Hero = () => {
   return (
