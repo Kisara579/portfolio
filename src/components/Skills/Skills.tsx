@@ -1,4 +1,7 @@
+import { useScrollAnimation } from "../../hooks/useScrollAnimation";
+
 function Skills() {
+  const { elementRef, isVisible } = useScrollAnimation();
   const cardClass =
     "p-6 text-left rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 " +
     "transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/30 hover:shadow-lg hover:shadow-cyan-500/10";
@@ -8,7 +11,12 @@ function Skills() {
       className="w-full py-24 bg-gradient-to-b from-[#050816] via-black to-[#050816] scroll-mt-20"
     >
       {/* Section Heading */}
-      <div className="max-w-5xl mx-auto px-6 text-center mb-12">
+      <div
+        ref={elementRef}
+        className={`max-w-5xl mx-auto px-6 text-center mb-12 fade-in ${
+          isVisible ? "visible" : ""
+        }`}
+      >
         <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-cyan-400 drop-shadow-[0_0_10px_rgba(34,211,238,0.40)]">
           Skills & Learning Focus
         </h2>

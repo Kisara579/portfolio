@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
 
-body{
+body {
   overflow-x: hidden;
 }
 
@@ -15,10 +15,66 @@ body{
 }
 
 .neon-ring {
-  box-shadow: 0 0 0 2px rgba(37, 226, 255, 0.566), 0 0 35px rgba(34, 211, 238, 0.25);
+  box-shadow:
+    0 0 0 2px rgba(37, 226, 255, 0.566),
+    0 0 35px rgba(34, 211, 238, 0.25);
 }
 
 .neon-btn {
-  box-shadow: 0 0 12px rgba(34, 211, 238, 0.25),
-              0 0 20px rgba(168, 85, 247, 0.15);
+  box-shadow:
+    0 0 12px rgba(34, 211, 238, 0.25),
+    0 0 20px rgba(168, 85, 247, 0.15);
+}
+
+/* Scroll Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
+}
+
+.fade-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
+}
+
+.fade-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 1s ease-out,
+    transform 1s ease-out;
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
 }

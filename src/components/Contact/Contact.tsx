@@ -1,13 +1,21 @@
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
+import { useScrollAnimation } from "../../hooks/useScrollAnimation";
 
 function Contact() {
+  const { elementRef, isVisible } = useScrollAnimation();
+
   return (
     <section
       id="contact"
       className="w-full py-24 scroll-mt-20 bg-gradient-to-b from-[#050816] via-black to-[#050816]"
     >
-      <div className="max-w-5xl mx-auto px-6 text-center space-y-6">
+      <div
+        ref={elementRef}
+        className={`max-w-5xl mx-auto px-6 text-center space-y-6 fade-in ${
+          isVisible ? "visible" : ""
+        }`}
+      >
         <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-cyan-400">
           Contact
         </h2>

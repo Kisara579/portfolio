@@ -1,11 +1,20 @@
+import { useScrollAnimation } from "../../hooks/useScrollAnimation";
+
 function About() {
+  const { elementRef, isVisible } = useScrollAnimation();
+
   return (
     <section
       id="about"
       className="w-full py-24 bg-gradient-to-b from-[#050816] via-black to-[#050816] scroll-mt-20"
     >
       <div className="max-w-4xl mx-auto px-6">
-        <div className="rounded-3xl bg-white/5 backdrop-blur-md border border-white/10 p-10 text-center space-y-6 shadow-lg shadow-black/30">
+        <div
+          ref={elementRef}
+          className={`rounded-3xl bg-white/5 backdrop-blur-md border border-white/10 p-10 text-center space-y-6 shadow-lg shadow-black/30 fade-in ${
+            isVisible ? "visible" : ""
+          }`}
+        >
           <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-cyan-400 mb-6">
             About Me
           </h2>
