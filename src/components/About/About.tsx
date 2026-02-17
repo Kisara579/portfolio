@@ -2,7 +2,7 @@ function About() {
   return (
     <section
       id="about"
-      className="w-full py-12 bg-gradient-to-b from[#050816] via-black to-[#050816] scroll-mt-28"
+      className="w-full py-24 bg-gradient-to-b from-[#050816] via-black to-[#050816] scroll-mt-20"
     >
       <div className="max-w-4xl mx-auto px-6">
         <div className="rounded-3xl bg-white/5 backdrop-blur-md border border-white/10 p-10 text-center space-y-6 shadow-lg shadow-black/30">
