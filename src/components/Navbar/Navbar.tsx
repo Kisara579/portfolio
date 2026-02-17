@@ -68,7 +68,14 @@ function Navbar() {
       <div
         className={`max-w-5xl mx-auto w-[calc(100%-24px)] sm:w-[calc(100%-48px)]  overflow-hidden px-6 py-3 flex justify-between items-center rounded-full bg-white/5 backdrop-blur-md border border-white/10 shadow-lg shadow-black/20 transition-all duration-300 ${scrolled ? "px-4 sm:px-5 py-2 bg-black/40" : "px-4 sm:px-6 py-3 bg-white/5"}`}
       >
-        <h1 className="text-2xl font-bold text-cyan-400">KB</h1>
+        <a
+          href="#home"
+          onClick={() => setMenuOpen(false)}
+          className="text-2xl font-bold text-cyan-400 hover:text-cyan-300 transition"
+        >
+          KB
+        </a>
+
         <button
           className="sm:hidden text-white text-2xl px-3 py-2 rounded-full hover:bg-white/5 transition"
           onClick={() => setMenuOpen((v) => !v)}

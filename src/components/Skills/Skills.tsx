@@ -1,13 +1,17 @@
 function Skills() {
   return (
-    <section id="skills" className="w-full py-32 bg-slate-950">
+    <section
+      id="skills"
+      className="w-full py-12 bg-gradient-to-b from-[#050816] via-black to-[#050816] scroll-mt-28"
+    >
       {/* Section Heading */}
       <div className="max-w-5xl mx-auto px-6 text-center mb-12">
         <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-cyan-500">
           Skills & Learning Focus
         </h2>
         <p className="text-gray-400 mt-4">
-          Areas I’m actively learning and exploring as I build my cybersecurity and computer science foundation.
+          Areas I’m actively learning and exploring as I build my cybersecurity
+          and computer science foundation.
         </p>
       </div>
 

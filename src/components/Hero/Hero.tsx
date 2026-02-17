@@ -1,4 +1,4 @@
-import UserImage from "../../assets/user.jpg";
+import UserImage from "../../assets/dp.jpg";
 
 const Hero = () => {
   return (
@@ -10,7 +10,7 @@ const Hero = () => {
             <img
               src={UserImage}
               alt="User illustration"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover opacity-80"
             />
           </div>
         </div>
