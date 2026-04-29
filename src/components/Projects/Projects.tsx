@@ -11,10 +11,18 @@ function Projects() {
       githubUrl: "https://github.com/kisara579/smart-password-risk-analyzer",
     },
     {
-      title: "Portfolio Website",
-      description: "Personal developer portfolio with modern UI.",
-      techStack: ["React", "Tailwind", "Vite"],
-      githubUrl: "https://github.com/kisara579/portfolio",
+      title: "AI Birth Complication Prediction System",
+      description:
+        "Machine learning system for predicting maternal health complications using classification models and performance evaluation metrics.",
+      techStack: ["Python", "XGBoost", "Pandas", "Scikit-learn", "ML"],
+      githubUrl: "https://github.com/Kisara579/AI_based_Birth_Cohort_Study",
+    },
+    {
+      title: "Smart Notes App",
+      description:
+        "A productivity notes application with local storage and clean UI for managing personal notes efficiently.",
+      techStack: ["Flutter", "Dart", "Local Storage", "UI/UX"],
+      githubUrl: "https://github.com/Kisara579/secure_notes_app",
     },
   ];
   return (

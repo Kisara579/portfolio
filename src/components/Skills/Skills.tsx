@@ -31,13 +31,13 @@ function Skills() {
       <div className="max-w-5xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 gap-8">
         <div className={cardClass}>
           <h3 className="text-xl font-semibold text-white mb-3">
-            Cybersecurity (Learning Focus)
+            Cybersecurity & System Security
           </h3>
           <ul className="list-disc list-inside space-y-2 text-slate-200/90">
-            <li>Understanding common security concepts</li>
-            <li>Intro to web vulnerabilities</li>
-            <li>OWASP Top 10 (learning)</li>
-            <li>Password & authentication basics</li>
+            <li>Understanding basic web security fundamentals</li>
+            <li>Basic awareness of OWASP Top 10 vulnerabilities</li>
+            <li>Basic understanding of authentication and access control</li>
+            <li>Developing security-aware thinking in web applications</li>
           </ul>
         </div>
         <div className={cardClass}>
@@ -46,31 +46,45 @@ function Skills() {
           </h3>
           <ul className="list-disc list-inside space-y-2 text-slate-200/90">
             <li>Programming fundamentals</li>
-            <li>Data structures (learning)</li>
+            <li>Data structures</li>
             <li>Basic networking concepts</li>
             <li>Operating system basics</li>
           </ul>
         </div>
         <div className={cardClass}>
           <h3 className="text-xl font-semibold text-white mb-3">
-            Programming & Web Development
+            Machine Learning & AI (Project-Based)
           </h3>
           <ul className="list-disc list-inside space-y-2 text-slate-200/90">
-            <li>JavaScript (basics)</li>
-            <li>Python (basics)</li>
-            <li>React (learning)</li>
-            <li>HTML, CSS, Tailwind</li>
+            <li>Developing ML models for healthcare prediction systems</li>
+            <li>Working with classification algorithms</li>
+            <li>
+              Model evaluation using accuracy, precision, recall, and F1-score
+            </li>
+            <li>Data preprocessing and feature selection for ML pipelines</li>
+          </ul>
+        </div>
+
+        <div className={cardClass}>
+          <h3 className="text-xl font-semibold text-white mb-3">
+            Programming & Application Development
+          </h3>
+          <ul className="list-disc list-inside space-y-2 text-slate-200/90">
+            <li>Python for machine learning and backend logic</li>
+            <li>JavaScript & React for frontend development</li>
+            <li>Flutter for mobile application development</li>
+            <li>HTML, CSS, Tailwind for responsive UI design</li>
           </ul>
         </div>
         <div className={cardClass}>
           <h3 className="text-xl font-semibold text-white mb-3">
-            Tools & Development Environment
+            Tools & Development Workflow
           </h3>
           <ul className="list-disc list-inside space-y-2 text-slate-200/90">
-            <li>Linux (beginner)</li>
-            <li>Git & GitHub</li>
-            <li>VS Code</li>
-            <li>Command line basics</li>
+            <li>Git & GitHub version control</li>
+            <li>VS Code development environment</li>
+            <li>Linux command line basics</li>
+            <li>API integration and debugging practices</li>
           </ul>
         </div>
       </div>
