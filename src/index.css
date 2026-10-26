@@ -2,37 +2,212 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ═══════════════════════════════════════
+   CYBER THEME — Global Styles
+   ═══════════════════════════════════════ */
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   overflow-x: hidden;
+  background-color: #0a0a0f;
+  color: #c0c0c0;
+  font-family: 'JetBrains Mono', monospace;
 }
+
+/* Selection color */
+::selection {
+  background: rgba(0, 255, 65, 0.3);
+  color: #00ff41;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0f;
+}
+::-webkit-scrollbar-thumb {
+  background: #1a3a1a;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00ff41;
+}
+
+/* ═══════════════════════════════════════
+   NEON & GLOW EFFECTS
+   ═══════════════════════════════════════ */
 
 .text-glow {
-  text-shadow: 0 0 12px rgba(34, 211, 238, 0.35);
+  text-shadow: 0 0 7px rgba(0, 255, 65, 0.6), 0 0 15px rgba(0, 255, 65, 0.3), 0 0 30px rgba(0, 255, 65, 0.1);
 }
 
-.neon-ring {
-  box-shadow:
-    0 0 0 2px rgba(37, 226, 255, 0.566),
-    0 0 35px rgba(34, 211, 238, 0.25);
+.text-glow-amber {
+  text-shadow: 0 0 7px rgba(255, 176, 0, 0.6), 0 0 15px rgba(255, 176, 0, 0.3);
 }
 
-.neon-btn {
-  box-shadow:
-    0 0 12px rgba(34, 211, 238, 0.25),
-    0 0 20px rgba(168, 85, 247, 0.15);
+.neon-border {
+  box-shadow: 0 0 5px rgba(0, 255, 65, 0.3), 0 0 10px rgba(0, 255, 65, 0.1), inset 0 0 5px rgba(0, 255, 65, 0.05);
 }
 
-/* Scroll Animations */
+.neon-border-hover:hover {
+  box-shadow: 0 0 10px rgba(0, 255, 65, 0.5), 0 0 20px rgba(0, 255, 65, 0.2), 0 0 40px rgba(0, 255, 65, 0.1);
+}
+
+/* ═══════════════════════════════════════
+   SCANLINE EFFECT
+   ═══════════════════════════════════════ */
+
+.scanlines {
+  position: relative;
+  overflow: hidden;
+}
+
+.scanlines::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 255, 65, 0.03) 2px,
+    rgba(0, 255, 65, 0.03) 4px
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ═══════════════════════════════════════
+   GLITCH EFFECT
+   ═══════════════════════════════════════ */
+
+.glitch {
+  position: relative;
+  animation: glitch-skew 4s infinite linear alternate-reverse;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch::before {
+  color: #ff0040;
+  animation: glitch-effect 3s infinite linear alternate-reverse;
+  clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+  transform: translate(-2px, -1px);
+}
+
+.glitch::after {
+  color: #00ff41;
+  animation: glitch-effect 2s infinite linear alternate-reverse;
+  clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+  transform: translate(2px, 1px);
+}
+
+@keyframes glitch-effect {
+  0% { transform: translate(0); }
+  20% { transform: translate(-3px, 3px); }
+  40% { transform: translate(-3px, -3px); }
+  60% { transform: translate(3px, 3px); }
+  80% { transform: translate(3px, -3px); }
+  100% { transform: translate(0); }
+}
+
+@keyframes glitch-skew {
+  0% { transform: skew(0deg); }
+  20% { transform: skew(0deg); }
+  21% { transform: skew(-0.5deg); }
+  22% { transform: skew(0deg); }
+  50% { transform: skew(0deg); }
+  51% { transform: skew(0.5deg); }
+  52% { transform: skew(0deg); }
+  100% { transform: skew(0deg); }
+}
+
+/* ═══════════════════════════════════════
+   TERMINAL WINDOW
+   ═══════════════════════════════════════ */
+
+.terminal-window {
+  background: rgba(17, 17, 24, 0.8);
+  border: 1px solid rgba(0, 255, 65, 0.15);
+  border-radius: 12px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.terminal-window:hover {
+  border-color: rgba(0, 255, 65, 0.35);
+  box-shadow: 0 0 15px rgba(0, 255, 65, 0.1), 0 8px 32px rgba(0, 0, 0, 0.4);
+  transform: translateY(-4px);
+}
+
+.terminal-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: rgba(0, 255, 65, 0.05);
+  border-bottom: 1px solid rgba(0, 255, 65, 0.1);
+}
+
+.terminal-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.terminal-body {
+  padding: 20px;
+}
+
+/* ═══════════════════════════════════════
+   CURSOR BLINK
+   ═══════════════════════════════════════ */
+
+@keyframes blink-caret {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.blinking-cursor::after {
+  content: '█';
+  color: #00ff41;
+  animation: blink-caret 0.8s step-end infinite;
+  margin-left: 2px;
+}
+
+/* ═══════════════════════════════════════
+   CIRCUIT GRID BACKGROUND
+   ═══════════════════════════════════════ */
+
+.circuit-bg {
+  background-image:
+    linear-gradient(rgba(0, 255, 65, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 65, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* ═══════════════════════════════════════
+   SCROLL ANIMATIONS
+   ═══════════════════════════════════════ */
+
 .fade-in {
   opacity: 0;
   transform: translateY(30px);
-  transition:
-    opacity 0.8s ease-out,
-    transform 0.8s ease-out;
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .fade-in.visible {
@@ -42,10 +217,8 @@ body {
 
 .fade-in-left {
   opacity: 0;
-  transform: translateX(-30px);
-  transition:
-    opacity 0.8s ease-out,
-    transform 0.8s ease-out;
+  transform: translateX(-40px);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .fade-in-left.visible {
@@ -55,10 +228,8 @@ body {
 
 .fade-in-right {
   opacity: 0;
-  transform: translateX(30px);
-  transition:
-    opacity 0.8s ease-out,
-    transform 0.8s ease-out;
+  transform: translateX(40px);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .fade-in-right.visible {
@@ -69,12 +240,160 @@ body {
 .fade-in-up {
   opacity: 0;
   transform: translateY(40px);
-  transition:
-    opacity 1s ease-out,
-    transform 1s ease-out;
+  transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1), transform 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .fade-in-up.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Staggered children animation */
+.stagger-children > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.stagger-children.visible > *:nth-child(1) { transition-delay: 0.1s; opacity: 1; transform: translateY(0); }
+.stagger-children.visible > *:nth-child(2) { transition-delay: 0.2s; opacity: 1; transform: translateY(0); }
+.stagger-children.visible > *:nth-child(3) { transition-delay: 0.3s; opacity: 1; transform: translateY(0); }
+.stagger-children.visible > *:nth-child(4) { transition-delay: 0.4s; opacity: 1; transform: translateY(0); }
+.stagger-children.visible > *:nth-child(5) { transition-delay: 0.5s; opacity: 1; transform: translateY(0); }
+.stagger-children.visible > *:nth-child(6) { transition-delay: 0.6s; opacity: 1; transform: translateY(0); }
+
+/* ═══════════════════════════════════════
+   CYBER BUTTON
+   ═══════════════════════════════════════ */
+
+.cyber-btn {
+  position: relative;
+  padding: 12px 28px;
+  background: transparent;
+  border: 1px solid rgba(0, 255, 65, 0.5);
+  color: #00ff41;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.875rem;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.cyber-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 65, 0.15), transparent);
+  transition: left 0.5s ease;
+}
+
+.cyber-btn:hover::before {
+  left: 100%;
+}
+
+.cyber-btn:hover {
+  background: rgba(0, 255, 65, 0.1);
+  box-shadow: 0 0 15px rgba(0, 255, 65, 0.3), 0 0 30px rgba(0, 255, 65, 0.1);
+  transform: translateY(-2px);
+}
+
+.cyber-btn-filled {
+  position: relative;
+  padding: 12px 28px;
+  background: rgba(0, 255, 65, 0.15);
+  border: 1px solid rgba(0, 255, 65, 0.5);
+  color: #00ff41;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.875rem;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.cyber-btn-filled:hover {
+  background: rgba(0, 255, 65, 0.25);
+  box-shadow: 0 0 20px rgba(0, 255, 65, 0.4), 0 0 40px rgba(0, 255, 65, 0.15);
+  transform: translateY(-2px);
+}
+
+/* ═══════════════════════════════════════
+   HEX FRAME
+   ═══════════════════════════════════════ */
+
+.hex-frame {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.hex-frame-border {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  padding: 3px;
+  background: linear-gradient(135deg, #00ff41, #0a3a0a, #00ff41);
+  background-size: 200% 200%;
+  animation: borderFlow 3s linear infinite;
+}
+
+@keyframes borderFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ═══════════════════════════════════════
+   INPUT STYLES
+   ═══════════════════════════════════════ */
+
+.cyber-input {
+  background: rgba(0, 255, 65, 0.03);
+  border: 1px solid rgba(0, 255, 65, 0.15);
+  color: #00ff41;
+  font-family: 'JetBrains Mono', monospace;
+  padding: 12px 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  caret-color: #00ff41;
+}
+
+.cyber-input::placeholder {
+  color: rgba(0, 255, 65, 0.3);
+}
+
+.cyber-input:focus {
+  outline: none;
+  border-color: rgba(0, 255, 65, 0.5);
+  box-shadow: 0 0 10px rgba(0, 255, 65, 0.15), 0 0 20px rgba(0, 255, 65, 0.05);
+  background: rgba(0, 255, 65, 0.05);
+}
+
+/* ═══════════════════════════════════════
+   CLASSIFIED STAMP
+   ═══════════════════════════════════════ */
+
+.stamp {
+  display: inline-block;
+  padding: 2px 10px;
+  border: 2px solid;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  transform: rotate(-2deg);
+  opacity: 0.8;
+}
+
+.stamp-completed {
+  color: #00ff41;
+  border-color: #00ff41;
+}
+
+.stamp-progress {
+  color: #ffb000;
+  border-color: #ffb000;
 }

@@ -1,92 +1,127 @@
 import { useScrollAnimation } from "../../hooks/useScrollAnimation";
 
+const skillCategories = [
+  {
+    title: "Cybersecurity & System Security",
+    tag: "OFFENSIVE",
+    tagColor: "text-cyber-red",
+    icon: "🛡️",
+    skills: [
+      "Understanding basic web security fundamentals",
+      "Basic awareness of OWASP Top 10 vulnerabilities",
+      "Basic understanding of authentication and access control",
+      "Developing security-aware thinking in web applications",
+    ],
+  },
+  {
+    title: "Computer Science Foundations",
+    tag: "CORE",
+    tagColor: "text-cyber-green",
+    icon: "💻",
+    skills: [
+      "Programming fundamentals",
+      "Data structures",
+      "Basic networking concepts",
+      "Operating system basics",
+    ],
+  },
+  {
+    title: "Machine Learning & AI",
+    tag: "RESEARCH",
+    tagColor: "text-cyber-amber",
+    icon: "🧠",
+    skills: [
+      "Developing ML models for healthcare prediction systems",
+      "Working with classification algorithms",
+      "Model evaluation using accuracy, precision, recall, and F1-score",
+      "Data preprocessing and feature selection for ML pipelines",
+    ],
+  },
+  {
+    title: "Programming & App Development",
+    tag: "BUILD",
+    tagColor: "text-cyber-green",
+    icon: "⚡",
+    skills: [
+      "Python for machine learning and backend logic",
+      "JavaScript & React for frontend development",
+      "Flutter for mobile application development",
+      "HTML, CSS, Tailwind for responsive UI design",
+    ],
+  },
+  {
+    title: "Tools & Development Workflow",
+    tag: "TOOLS",
+    tagColor: "text-cyber-green",
+    icon: "🔧",
+    skills: [
+      "Git & GitHub version control",
+      "VS Code development environment",
+      "Linux command line basics",
+      "API integration and debugging practices",
+    ],
+  },
+];
+
 function Skills() {
   const { elementRef, isVisible } = useScrollAnimation();
-  const cardClass =
-    "p-6 text-left rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 " +
-    "transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/30 hover:shadow-lg hover:shadow-cyan-500/10";
+
   return (
     <section
       id="skills"
-      className="w-full py-24 bg-gradient-to-b from-[#050816] via-black to-[#050816] scroll-mt-20"
+      className="w-full py-24 scroll-mt-20 relative"
     >
       {/* Section Heading */}
       <div
         ref={elementRef}
-        className={`max-w-5xl mx-auto px-6 text-center mb-12 fade-in ${
-          isVisible ? "visible" : ""
-        }`}
+        className={`max-w-5xl mx-auto px-6 text-center mb-14 fade-in ${isVisible ? "visible" : ""}`}
       >
-        <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-cyan-400 drop-shadow-[0_0_10px_rgba(34,211,238,0.40)]">
-          Skills & Learning Focus
+        <div className="text-sm font-mono text-cyber-green/40 mb-3">
+          <span className="text-cyber-green/60">&gt;</span> cat /etc/arsenal
+        </div>
+        <h2 className="text-3xl sm:text-4xl font-heading font-bold text-cyber-green text-glow">
+          Arsenal
         </h2>
-        <div className="mx-auto mt-4 h-[2px] w-24 bg-gradient-to-r from-transparent via-cyan-400/70 to-transparent" />
-        <p className="text-gray-400 mt-4">
-          Areas I’m actively learning and exploring as I build my cybersecurity
-          and computer science foundation.
+        <div className="mx-auto mt-4 h-[1px] w-32 bg-gradient-to-r from-transparent via-cyber-green/50 to-transparent" />
+        <p className="text-cyber-text/60 mt-4 font-mono text-sm">
+          Areas I'm actively learning and exploring as I build my cybersecurity foundation.
         </p>
       </div>
 
       {/* Skills Grid */}
-      <div className="max-w-5xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 gap-8">
-        <div className={cardClass}>
-          <h3 className="text-xl font-semibold text-white mb-3">
-            Cybersecurity & System Security
-          </h3>
-          <ul className="list-disc list-inside space-y-2 text-slate-200/90">
-            <li>Understanding basic web security fundamentals</li>
-            <li>Basic awareness of OWASP Top 10 vulnerabilities</li>
-            <li>Basic understanding of authentication and access control</li>
-            <li>Developing security-aware thinking in web applications</li>
-          </ul>
-        </div>
-        <div className={cardClass}>
-          <h3 className="text-xl font-semibold text-white mb-3">
-            Computer Science Foundations
-          </h3>
-          <ul className="list-disc list-inside space-y-2 text-slate-200/90">
-            <li>Programming fundamentals</li>
-            <li>Data structures</li>
-            <li>Basic networking concepts</li>
-            <li>Operating system basics</li>
-          </ul>
-        </div>
-        <div className={cardClass}>
-          <h3 className="text-xl font-semibold text-white mb-3">
-            Machine Learning & AI (Project-Based)
-          </h3>
-          <ul className="list-disc list-inside space-y-2 text-slate-200/90">
-            <li>Developing ML models for healthcare prediction systems</li>
-            <li>Working with classification algorithms</li>
-            <li>
-              Model evaluation using accuracy, precision, recall, and F1-score
-            </li>
-            <li>Data preprocessing and feature selection for ML pipelines</li>
-          </ul>
-        </div>
-
-        <div className={cardClass}>
-          <h3 className="text-xl font-semibold text-white mb-3">
-            Programming & Application Development
-          </h3>
-          <ul className="list-disc list-inside space-y-2 text-slate-200/90">
-            <li>Python for machine learning and backend logic</li>
-            <li>JavaScript & React for frontend development</li>
-            <li>Flutter for mobile application development</li>
-            <li>HTML, CSS, Tailwind for responsive UI design</li>
-          </ul>
-        </div>
-        <div className={cardClass}>
-          <h3 className="text-xl font-semibold text-white mb-3">
-            Tools & Development Workflow
-          </h3>
-          <ul className="list-disc list-inside space-y-2 text-slate-200/90">
-            <li>Git & GitHub version control</li>
-            <li>VS Code development environment</li>
-            <li>Linux command line basics</li>
-            <li>API integration and debugging practices</li>
-          </ul>
-        </div>
+      <div className={`max-w-5xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 gap-6 stagger-children ${isVisible ? "visible" : ""}`}>
+        {skillCategories.map((category) => (
+          <div
+            key={category.title}
+            className="terminal-window scanlines group"
+          >
+            <div className="terminal-header">
+              <div className="terminal-dot bg-cyber-red" />
+              <div className="terminal-dot bg-cyber-amber" />
+              <div className="terminal-dot bg-cyber-green" />
+              <span className="text-[10px] font-mono text-cyber-green/40 ml-2 truncate">
+                {category.title.toLowerCase().replace(/[\s&]/g, '_')}.sh
+              </span>
+              <span className={`ml-auto text-[9px] font-mono font-bold tracking-widest ${category.tagColor}`}>
+                [{category.tag}]
+              </span>
+            </div>
+            <div className="terminal-body relative z-10">
+              <h3 className="text-lg font-heading font-semibold text-cyber-bright mb-4 flex items-center gap-2">
+                <span>{category.icon}</span>
+                {category.title}
+              </h3>
+              <ul className="space-y-2.5 font-mono text-sm">
+                {category.skills.map((skill) => (
+                  <li key={skill} className="flex gap-2 text-cyber-text/80 group-hover:text-cyber-text transition-colors duration-300">
+                    <span className="text-cyber-green/60 shrink-0">→</span>
+                    <span>{skill}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
