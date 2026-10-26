@@ -1,4 +1,4 @@
-import UserImage from "../../assets/profile.jpg";
+import UserImage from "../../assets/profile.webp";
 
 const Hero = () => {
   return (
@@ -13,7 +13,7 @@ const Hero = () => {
             <img
               src={UserImage}
               alt="User illustration"
-              className="w-full h-full object-cover opacity-80"
+              className="w-full h-full object-cover object-[40%_top] opacity-80"
             />
           </div>
         </div>
